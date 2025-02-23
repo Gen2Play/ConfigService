@@ -1,6 +1,5 @@
 package com.Gen2Play.ConfigService;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -17,8 +16,7 @@ public class EnvConfig {
     //     return dotenv.get(key);
     // }
 
-    @Bean
-    public String getEnv(String key) {
+    public static String getEnv(String key) {
         return System.getenv(key);  // Đọc biến từ Railway ENV
     }
 }
