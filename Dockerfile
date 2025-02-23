@@ -14,4 +14,4 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Chạy ứng dụng khi container khởi động
-CMD ["java", "-jar", "target/YOUR_APP.jar"]
+CMD ["java", "-jar", "target/ConfigService-3.4.2.jar"]
