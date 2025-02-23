@@ -6,6 +6,11 @@ spring:
           uri: ${SPRING_CLOUD_CONFIG_SERVER_GIT_URI}
           clone-on-start: true
           default-label: main
+        vault:
+          enable-label: true
+      allow-override: true
+      override-none: false
+      override-system-properties: true
     vault:
       uri: ${SPRING_CLOUD_VAULT_URI}
       authentication: token
@@ -14,7 +19,8 @@ spring:
         enabled: true
     bus:
       enabled: true
-
+  config:
+    import: "optional:env"
   rabbitmq:
     host: localhost
     port: 5672
